@@ -1,0 +1,13 @@
+#toolbar-title {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
