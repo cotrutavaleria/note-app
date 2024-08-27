@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AngularMaterialsModule } from '../shared/app.angular-material.module';
+import { AngularMaterialsModule } from '../shared/resources/app.angular-material.module';
 import { TextEditorComponent } from '../text-editor/text-editor.component';
 import { Note } from '../shared/views/note.interface';
 import { NoteService } from '../shared/services/note.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe, NgFor, NgIf } from "@angular/common";
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-notes-board',
@@ -24,6 +25,12 @@ export class NotesBoardComponent implements OnInit {
     this.getNotes();
   }
 
+  drop(event: CdkDragDrop<string[]>) {
+    console.log(this.existentNotes, event);
+    moveItemInArray(this.existentNotes, event.previousIndex, event.currentIndex);
+    console.log(this.existentNotes);
+  }
+
   getNotes() {
     this.noteService.getNotes().subscribe((notes) => {
       this.existentNotes = notes;
@@ -37,11 +44,11 @@ export class NotesBoardComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((note) => {
-      console.log(note);
       if (note) {
         if (note.status == "new") {
           this.existentNotes.push(note.response);
-        } else if (note.status == "updated") {
+        } 
+        else if (note.status == "updated") {
           const result = this.existentNotes.filter(s => s.id == note.response.id);
           let noteIndex = this.existentNotes.indexOf(result[0]);
           this.existentNotes[noteIndex] = note.response;
@@ -57,7 +64,6 @@ export class NotesBoardComponent implements OnInit {
     if (id) {
       this.existentNotes = this.existentNotes.filter(s => s.id != id);
       this.noteService.deleteNote(id).subscribe();
-      console.log("delete");
     }
   }
 }

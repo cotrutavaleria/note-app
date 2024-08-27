@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { AngularMaterialsModule } from '../shared/app.angular-material.module';
+import { AngularMaterialsModule } from '../shared/resources/app.angular-material.module';
 import { NoteService } from '../shared/services/note.service';
 import { NgFor, NgIf } from '@angular/common';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';

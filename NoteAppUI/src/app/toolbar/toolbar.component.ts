@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularMaterialsModule } from '../shared/app.angular-material.module';
+import { AngularMaterialsModule } from '../shared/resources/app.angular-material.module';
 @Component({
   selector: 'app-toolbar',
   standalone: true,
