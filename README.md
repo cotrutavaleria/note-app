@@ -16,5 +16,16 @@ The application consists of 3 components:
 2. NoteAppUI: The development process of the client application consists of using the following frameworks: Angular version 17, Angular Material and Bootstrap version 5.
 3. MongoDB database: Utilized to build a database associated to the application, containing information regarding the notes.
 
-
+## Bibliography
+1. Conventional Commit Messages: https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
+2. CSS Flexbox Layout Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+3. Angular Material: https://v17.material.angular.io/
+4. Fetch data from an API in Angular: https://stackademic.com/blog/fetching-data-from-an-api-in-angular
+5. HTTP: Send data to a server: https://v17.angular.io/guide/http-send-data-to-server
+6. Get and Receive data from a dialog: https://stackblitz.com/edit/get-and-receive-data-from-dialog
+7. Observables and subjects in Angular: https://medium.com/@jaydeepvpatil225/observables-and-subjects-in-angular-a4d73dfa5bb
+8. .NET 8 .🚀🔥: Understanding CORS with ASP.NET: https://www.youtube.com/watch?v=WAKsZwzXhf4&t=644s
+9. Tutorial: Create a web API with ASP.NET Core: https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio
+10. Create a web API with ASP.NET Core and MongoDB: https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-8.0&tabs=visual-studio-code
+11. Learn MongoDB in 1 Hour 🍃 (2023): https://www.youtube.com/watch?v=c2M-rlkkT5o&t=227s
 
